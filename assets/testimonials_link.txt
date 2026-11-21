@@ -1,0 +1,56 @@
+const testimonials = [
+  {
+    id: 1,
+    name: "Neha",
+    video:
+      "https://res.cloudinary.com/dm8xxqdgg/video/upload/v1789152750/VID_20260911_074609_876_bsl_1_1_iyiei9.mp4",
+  },
+  {
+    id: 2,
+    name: "Lavina",
+    video:
+      "https://res.cloudinary.com/dm8xxqdgg/video/upload/v1789146599/AQNkWKN0hOyOl0ukP3b_53qD6A2E1f4cf0xO9iG4eoS3b0y5IVnllZI8Oy5-rgua7xhaj_TI-BQ7aLRaAy9KoBlffLiLe30bjqhzE6k_1_ig613i.mp4",
+  },
+  {
+    id: 3,
+    name: "Saurav",
+    video:
+      "https://res.cloudinary.com/dm8xxqdgg/video/upload/v1789150408/VID_20260911_072416_743_bsl_1_lriivd.mp4",
+  },
+  {
+    id: 4,
+    name: "Sanskriti",
+    video:
+      "https://res.cloudinary.com/dm8xxqdgg/video/upload/v1789152472/VID_20260910_071225_440_bsl_1_1_dmzaew.mp4",
+  },
+  {
+    id: 5,
+    name: "Gaurangi",
+    video:
+      "https://res.cloudinary.com/dm8xxqdgg/video/upload/v1789153223/VID_20260911_071828_747_bsl_1_1_mxlpg4.mp4",
+  },
+  {
+    id: 6,
+    name: "Pushkar",
+    video:
+      "https://res.cloudinary.com/dm8xxqdgg/video/upload/v1789150516/VID_20260911_071003_821_bsl_1_ylhiks.mp4",
+  },
+  {
+    id: 7,
+    name: "Shanvi",
+    video:
+      "https://res.cloudinary.com/dm8xxqdgg/video/upload/q_auto/f_auto/v1780220180/shanvi_sbqmpj.mp4",
+  },
+  {
+    id: 8,
+    name: "Sonia",
+    video:
+      "https://res.cloudinary.com/dm8xxqdgg/video/upload/q_auto/f_auto/v1780220175/sonia_zdbkvo.mp4",
+  },
+  {
+    id: 9,
+    name: "Dolly",
+    video:
+      "https://res.cloudinary.com/dm8xxqdgg/video/upload/q_auto/f_auto/v1780220180/dolly_w2hjxs.mp4",
+  },
+];
