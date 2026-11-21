@@ -81,6 +81,17 @@ export default function Footer() {
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Unmutex. Built for confidence. All rights reserved.</span>
           <span>Made for every voice that's been on mute.</span>
+          <span className="credit">
+            Designed &amp; built by{" "}
+            <a
+              href="https://www.linkedin.com/in/nikhil-kumar-tiwari-8b16b0376/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Nikhil on LinkedIn"
+            >
+              Nikhil <LinkedinIcon size={14} />
+            </a>
+          </span>
         </div>
       </div>
     </footer>

@@ -128,6 +128,24 @@
   }
 }
 
+/* Footer credit */
+.credit a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  color: var(--ink);
+  border-bottom: 1.5px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+.credit a:hover {
+  color: var(--violet);
+  border-color: var(--violet);
+}
+.credit svg {
+  color: #0a66c2;
+}
+
 /* Feedback page */
 .share-page {
   min-height: 100svh;
