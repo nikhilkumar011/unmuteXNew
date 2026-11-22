@@ -17,9 +17,9 @@ export const SITE = {
 };
 
 export const EMAILJS = {
-  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_9208yki",
-  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_lyfm12f",
-  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "G9aUSDGvoorNyRFZm",
+  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_vof9r23",
+  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_b521arr",
+  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "uPpFPGFPpCZH7C2x_",
 };
 
 export const EXPLORE_LINKS = [
