@@ -9,7 +9,8 @@
     { "source": "/team", "destination": "/team/index.html" },
     { "source": "/book", "destination": "/book/index.html" },
     { "source": "/feedback", "destination": "/feedback/index.html" },
-    { "source": "/certificate", "destination": "/certificate/index.html" }
+    { "source": "/certificate", "destination": "/certificate/index.html" },
+    { "source": "/reviews", "destination": "/reviews/index.html" }
   ],
   "headers": [
     {

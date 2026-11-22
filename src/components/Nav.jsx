@@ -4,6 +4,7 @@ import { Menu, X, ArrowUpRight, ChevronDown, Route, Users, Mic, BookOpen, PlayCi
 import { EXPLORE_LINKS, PAGE_LINKS } from "../data.js";
 import { handleAnchorClick, IS_HOME, toSection } from "../lib/smooth.js";
 import { joinProps } from "./ui.jsx";
+import ThemeToggle from "./ThemeToggle.jsx";
 
 const ICONS = { route: Route, users: Users, mic: Mic, book: BookOpen, play: PlayCircle };
 const PATH = window.location.pathname.replace(/\/?$/, "/");
@@ -145,6 +146,7 @@ export default function Nav() {
         </nav>
 
         <div className="nav-actions">
+          <ThemeToggle />
           <a href="/book/" className="btn btn-ghost btn-sm hide-sm" aria-current={current("/book/")}>
             Book a call
           </a>

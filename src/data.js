@@ -31,6 +31,7 @@ export const EXPLORE_LINKS = [
 ];
 
 export const PAGE_LINKS = [
+  { label: "Reviews", href: "/reviews/" },
   { label: "Our Team", href: "/team/" },
   { label: "Certificate", href: "/certificate/" },
   { label: "Feedback", href: "/feedback/" },

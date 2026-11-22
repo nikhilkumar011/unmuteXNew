@@ -6,6 +6,7 @@ import Nav from "./components/Nav.jsx";
 import Footer from "./components/Footer.jsx";
 import "./styles.css";
 import "./pages.css";
+import "./theme.css";
 
 function Page({ children }) {
   useEffect(() => startSmoothScroll(), []);

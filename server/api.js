@@ -98,7 +98,7 @@ export async function apiMiddleware(req, res, next) {
   return true;
 }
 
-const PAGES = ["team", "book", "certificate", "feedback"];
+const PAGES = ["team", "book", "certificate", "feedback", "reviews"];
 
 export function rewritePage(pathname) {
   if (/^\/verify\/[^/]+\/?$/.test(pathname)) return "/verify/index.html";

@@ -1,0 +1,71 @@
+/* Theme toggle */
+.theme-toggle {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  border-radius: 12px;
+  border: 1.5px solid var(--line-2);
+  background: var(--surface);
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+.theme-toggle:hover {
+  border-color: var(--ink);
+}
+.theme-toggle span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+/* Dark-theme-only adjustments */
+:root[data-theme="dark"] .btn-primary {
+  background: linear-gradient(100deg, #1e6bff, #6d4ae0);
+  box-shadow: 0 12px 30px -12px rgba(109, 74, 224, 0.8);
+}
+:root[data-theme="dark"] .btn-primary::before {
+  background: linear-gradient(100deg, #3a7dff, #8565f0);
+}
+:root[data-theme="dark"] .team-cta .btn-primary {
+  background: #fff;
+}
+
+/* The logo's navy silhouette needs a light tile to stay visible on dark backgrounds */
+:root[data-theme="dark"] .brand img,
+:root[data-theme="dark"] .sj-logo {
+  background: #fff;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+:root[data-theme="dark"] .acts,
+:root[data-theme="dark"] .team-cta {
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+:root[data-theme="dark"] .rcard,
+:root[data-theme="dark"] .res-card,
+:root[data-theme="dark"] .member,
+:root[data-theme="dark"] .about-card,
+:root[data-theme="dark"] .share-card,
+:root[data-theme="dark"] .book-card {
+  border-color: var(--line-2);
+}
+
+:root[data-theme="dark"] .input::placeholder {
+  color: #7a83a0;
+}
+
+:root[data-theme="dark"] .rdialog-backdrop {
+  background: rgba(3, 5, 12, 0.7);
+}
+
+:root[data-theme="dark"] ::selection {
+  background: rgba(155, 132, 255, 0.3);
+}

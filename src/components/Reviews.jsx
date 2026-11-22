@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { X, RotateCw, PenLine } from "lucide-react";
 import { Eyebrow, Reveal, Stars } from "./ui.jsx";
 import { lockScroll } from "../lib/smooth.js";
-import { REVIEW_ADDED } from "../lib/api.js";
+import { useReviews } from "../lib/useReviews.js";
 
 const CLAMP_AT = 230;
 
@@ -16,7 +16,7 @@ const initials = (n) =>
     .join("")
     .toUpperCase();
 
-function Avatar({ r }) {
+export function Avatar({ r }) {
   return r.avatar ? (
     <img className="rav" src={r.avatar} alt="" loading="lazy" />
   ) : (
@@ -80,7 +80,7 @@ function SkeletonRow() {
   );
 }
 
-function ReviewDialog({ review, onClose }) {
+export function ReviewDialog({ review, onClose }) {
   const closeRef = useRef(null);
   useEffect(() => {
     const prev = document.activeElement;
@@ -131,36 +131,10 @@ function ReviewDialog({ review, onClose }) {
 }
 
 export default function Reviews() {
-  const [state, setState] = useState({ status: "loading", reviews: [] });
+  const { status, reviews, reload: load } = useReviews();
   const [open, setOpen] = useState(null);
 
-  const load = useCallback(async () => {
-    setState({ status: "loading", reviews: [] });
-    try {
-      const res = await fetch("/api/reviews", { headers: { Accept: "application/json" } });
-      if (!res.ok) throw new Error(String(res.status));
-      const { reviews } = await res.json();
-      setState({ status: "ready", reviews: Array.isArray(reviews) ? reviews : [] });
-    } catch {
-      setState({ status: "error", reviews: [] });
-    }
-  }, []);
-
-  useEffect(() => {
-    load();
-  }, [load]);
-
-  useEffect(() => {
-    const onAdded = (e) => {
-      const review = e.detail;
-      setState((s) => ({ status: "ready", reviews: [review, ...s.reviews.filter((r) => r.id !== review.id)] }));
-    };
-    window.addEventListener(REVIEW_ADDED, onAdded);
-    return () => window.removeEventListener(REVIEW_ADDED, onAdded);
-  }, []);
-
   const onClose = useCallback(() => setOpen(null), []);
-  const { status, reviews } = state;
   const a = reviews.filter((_, i) => i % 2 === 0);
   const b = reviews.filter((_, i) => i % 2 === 1);
   const twoRows = reviews.length >= 6;

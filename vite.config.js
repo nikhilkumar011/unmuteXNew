@@ -31,6 +31,7 @@ export default defineConfig(({ mode }) => {
           certificate: page("certificate/index.html"),
           verify: page("verify/index.html"),
           feedback: page("feedback/index.html"),
+          reviews: page("reviews/index.html"),
         },
       },
     },

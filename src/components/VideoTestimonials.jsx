@@ -7,7 +7,7 @@ import { EASE, Eyebrow, Reveal, SplitWords } from "./ui.jsx";
 import { useMediaQuery } from "../lib/useMediaQuery.js";
 import { lockScroll } from "../lib/smooth.js";
 
-function VideoCard({ t, onOpen, i }) {
+export function VideoCard({ t, onOpen, i }) {
   const [hover, setHover] = useState(false);
   const canHover = useMediaQuery("(hover: hover) and (pointer: fine)");
   return (
@@ -53,7 +53,7 @@ function Column({ items, offset, y, onOpen }) {
   );
 }
 
-function Player({ index, onClose, onStep }) {
+export function Player({ index, onClose, onStep }) {
   const t = TESTIMONIALS[index];
   const closeRef = useRef(null);
 
